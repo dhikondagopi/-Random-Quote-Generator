@@ -1,0 +1,145 @@
+/* 🌈 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
+}
+
+/* 💎 Main Card */
+.quote-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* ✨ Quote Section */
+.quote-box {
+  margin-bottom: 20px;
+  min-height: 120px;
+  position: relative;
+}
+
+#quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+#author {
+  font-size: 1rem;
+  color: #ddd;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* 🎬 Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.primary {
+  background: #5563de;
+}
+.primary:hover {
+  background: #3d4bbf;
+}
+
+.secondary {
+  background: #333;
+}
+.secondary:hover {
+  background: #000;
+}
+
+.twitter {
+  background: #1da1f2;
+}
+.twitter:hover {
+  background: #0d8ce0;
+}
+
+/* 🌀 Loader Animation */
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  display: none;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 🌈 Fade Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .quote-card {
+    width: 90%;
+    padding: 25px;
+  }
+  #quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* 🧾 Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #eee;
+  font-size: 0.9rem;
+}
